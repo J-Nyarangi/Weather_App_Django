@@ -3,14 +3,14 @@ import requests
 import datetime
 
 # Unsplash API Key (Replace with your actual key)
-UNSPLASH_API_KEY = "y63o6CFLR9e2hAG5l_gzGEETFZXdT8q6O2WsTg50Anc"
+UNSPLASH_API_KEY = "yourkey"
 UNSPLASH_URL = "https://api.unsplash.com/search/photos"
 
 def home(request):
     city = request.POST.get('city', 'Nairobi')  # Default to Nairobi
 
     # OpenWeather API Call
-    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=78e6ad87cc9b4462ba61caf41284dc16'
+    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=yourkey'
     PARAMS = {'units': 'metric'}
 
     try:
