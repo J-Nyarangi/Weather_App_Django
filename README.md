@@ -86,7 +86,7 @@ graph TD;
     C --> H[templates]
     H --> I[index.html]
     C --> J[static]
-    J --> K[CSS, JS, and images]
+    J --> K[CSS]
     A --> L[README.md]
 ```
 
