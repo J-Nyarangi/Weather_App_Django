@@ -1,189 +1,67 @@
-# Weather_App_Django
+# Weather App (Django)
 
-A Django-based web application that fetches real-time weather data for a given city using the OpenWeather API and displays a relevant city image from Unsplash.
+A Django-based web application that fetches real-time weather data for a given city using the OpenWeather API.  It also displays a relevant image of the city, if available, using the Unsplash API.
 
 ## Features
 
-- **Real-time Weather Data**: Fetches current weather conditions (temperature, description, and icon) for any city using the OpenWeather API.
-
-- **City Images**: Displays a beautiful image of the city using the Unsplash API.
-
-- **User-Friendly Interface**: Simple and intuitive interface for users to input a city name and view weather details.
-
-- **Default City**: If no city is provided, the app defaults to Nairobi.
+*   **Real-time Weather Data:** Fetches current weather conditions (temperature, description, and icon) for any city using the OpenWeather API.
+*   **City Image:** Displays a relevant image of the searched city using the Unsplash API.
+*   **User-Friendly Interface:** Simple and intuitive interface for users to input a city name and view weather details.
+*   **Default City:** If no city is provided, the app defaults to Nairobi.
 
 ## Technologies Used
 
-- **Django**: A Python-based web framework for building the application.
-
-- **OpenWeather API**: Provides real-time weather data.
-
-- **Unsplash API**: Fetches high-quality images of cities.
-
-- **Bootstrap**: For styling the frontend (optional, if used in your templates).
+*   **Django:** A Python-based web framework for building the application.
+*   **OpenWeather API:** Provides real-time weather data.
+*   **Unsplash API:** Fetches high-quality images of cities.
+*   **Bootstrap, CSS:** For styling the frontend.
 
 ## Prerequisites
 
 Before running the project, ensure you have the following installed:
 
-- Python 3.x
-
-- Django
-
-- `requests` library (for making API calls)
+*   Python 3.x
+*   Django
+*   `requests` library (for making API calls)
 
 ## Installation
 
-1\. **Clone the Repository**:
+1.  **Clone the Repository:**
 
-   ```bash
+    ```bash
+    git clone [https://github.com/your-username/weather-app.git](https://github.com/your-username/weather-app.git)
+    cd weather-app
+    ```
 
-   git clone [https://github.com/your-username/weather-app.git](https://github.com/your-username/weather-app.git)
+2.  **Set Up a Virtual Environment:**
 
-   cd weather-app
+    ```bash
+    python -m venv myenv
+    source myenv/bin/activate  # On Windows: myenv\Scripts\activate
+    ```
 
-````
+3.  **Install Dependencies:**
 
-2\.  **Set Up a Virtual Environment** (optional but recommended):
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-    ```bash
+## Running the Application
 
-    python -m venv venv
+1.  **Migrate Database:**
 
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```bash
+    python manage.py migrate
+    ```
 
-    ```
+2.  **Start the Development Server:**
 
-3\.  **Install Dependencies**:
+    ```bash
+    python manage.py runserver
+    ```
 
-    ```bash
+3.  **Open your web browser and navigate to `http://127.0.0.1:8000/` to view the application.**
 
-    pip install -r requirements.txt
+## API Keys
 
-    ```
-
-4\.  **Set Up API Keys**:
-
-      * Obtain an API key from OpenWeather and Unsplash.
-
-      * Replace the placeholders in the `views.py` file with your actual API keys:
-
-        ```python
-
-        UNSPLASHAPIKEY = "yourunsplashapikey"
-
-        OPENWEATHERAPIKEY = "youropenweatherapikey"
-
-        ```
-
-5\.  **Run Migrations**:
-
-    ```bash
-
-    python manage.py migrate
-
-    ```
-
-6\.  **Start the Development Server**:
-
-    ```bash
-
-    python manage.py runserver
-
-    ```
-
-7\.  **Access the Application**: Open your browser and navigate to `http://127.0.0.1:8000/`.
-
-## Usage
-
-1\.  On the homepage, enter the name of a city in the input field and click "Search."
-
-2\.  The app will display:
-
-      - Current weather conditions (temperature, description, and weather icon).
-
-      - A beautiful image of the city.
-
-3\.  If no city is entered, the app defaults to Nairobi.
-
-## Project Structure
-
-```
-
-weather-app/
-
-├── manage.py
-
-├── weather_app/
-
-│   ├── __init__.py
-
-│   ├── settings.py
-
-│   ├── urls.py
-
-│   ├── views.py
-
-│   ├── templates/
-
-│   │   └── index.html
-
-│   └── static/
-
-│       └── (CSS, JS, and images)
-
-└── README.md
-
-```
-
-## Live Site
-
-You can access the live version of this project at:  
-
-[Live Weather App](https://www.google.com/url?sa=E&source=gmail&q=your-pythonanywhere-username.pythonanywhere.com)  *(Replace `your-pythonanywhere-username`)*
-
-## Screenshots
-
-*Example: Weather details for Nairobi with a city image.*  *(Add screenshot here)*
-
-## Contributing
-
-Contributions are welcome\! If you'd like to contribute, please follow these steps:
-
-1\.  Fork the repository.
-
-2\.  Create a new branch (`git checkout -b feature/YourFeatureName`).
-
-3\.  Commit your changes (`git commit -m 'Add some feature'`).
-
-4\.  Push to the branch (`git push origin feature/YourFeatureName`).
-
-5\.  Open a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Acknowledgments
-
-  - OpenWeather for providing the weather data API.
-
-  - Unsplash for providing high-quality images.
-
-  - Django and the Python community for their amazing tools and libraries.
-
-## Contact
-
-For questions or feedback, feel free to reach out:
-
-  - **Your Name**
-
-  - **Email**: your.email@example.com
-
-  - **GitHub**: your-username
-
-<!-- end list -->
-
-```
-
-```
+You will need to obtain API keys for both OpenWeather and Unsplash and add them to your project settings.  Create a `.env` file in your project's root directory and add the following:
