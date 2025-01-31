@@ -3,7 +3,7 @@ import requests
 import datetime
 
 # Unsplash API Key (Replace with your actual key)
-UNSPLASH_API_KEY = "y63o6CFLR9e2hAG5l_gzGEETFZXdT8q6O2WsTg50Anc"
+UNSPLASH_API_KEY = "yourkey"
 UNSPLASH_URL = "https://api.unsplash.com/search/photos"
 
 def home(request):
