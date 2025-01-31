@@ -10,7 +10,7 @@ def home(request):
     city = request.POST.get('city', 'Nairobi')  # Default to Nairobi
 
     # OpenWeather API Call
-    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=78e6ad87cc9b4462ba61caf41284dc16'
+    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=yourkey'
     PARAMS = {'units': 'metric'}
 
     try:
