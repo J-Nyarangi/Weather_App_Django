@@ -73,6 +73,9 @@ You can access the live version of this project at:
 
 Open your browser and navigate to `http://127.0.0.1:8000/` to view the application.
 
+## Project Architecture
+
+```mermaid
 graph TD;
     A[weather-app] --> B[manage.py]
     A --> C[weather_app]
@@ -85,7 +88,7 @@ graph TD;
     C --> J[static]
     J --> K[CSS, JS, and images]
     A --> L[README.md]
-
+```
 
 ## Usage
 
